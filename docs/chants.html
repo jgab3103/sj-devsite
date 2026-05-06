@@ -24,6 +24,18 @@
             border-radius: 4px;
         }
 
+        /* MAKE COLUMNS EVEN */
+        .table {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .table th,
+        .table td {
+            width: 33.33%;
+            word-wrap: break-word;
+        }
+
         .table thead th {
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -35,14 +47,16 @@
             vertical-align: middle;
         }
 
+        /* MORE VISIBLE LINKS */
         .table a {
             text-decoration: none;
-            color: #111;
-            font-weight: 500;
+            color: #0d6efd; /* Bootstrap blue */
+            font-weight: 600;
         }
 
         .table a:hover {
             text-decoration: underline;
+            color: #084298; /* darker on hover */
         }
 
         /* SEARCH BOX STYLING */
@@ -74,7 +88,16 @@
 </nav>
 
 <!-- CONTENT -->
-<section class="projects-section bg-light pt-5" id="projects">
+<section class="projects-section pt-5" id="projects"
+    style="
+        background: 
+            linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+            url('assets/img/background3.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    "
+>
     <div class="container px-4 px-lg-5">
 
         <a href="./index.html">back</a><br/><br/>
@@ -87,7 +110,7 @@
                 type="text" 
                 id="searchInput" 
                 class="form-control search-box"
-                placeholder="Search chants, occasions, descriptions..."
+                placeholder="Search"
                 onkeyup="filterTable()"
             >
         </div>
@@ -107,60 +130,94 @@
 
                 <tbody>
                     <tr>
-                        <td><a href="./assets/pdf-files/TheUniversalWorldPrayerChant.pdf">Love-Ananda Adi Da</a></td>
+                        <td>Adi Da</td>
                         <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                          <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
 
                     <tr>
-                        <td><a href="chant2.html">Om Sri Adi Da</a></td>
-                     <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Adi Guru Da Jayanthi</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
 
                     <tr>
-                        <td><a href="chant3.html">Da Purnima (The Light of Grace)</a></td>
-                     <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
-                    </tr>
-                                        <tr>
-                        <td><a href="chant1.html">Om Ma Da</a></td>
-              <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Da Purnima (The Light of Grace)</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                        <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                    </td>
                     </tr>
 
                     <tr>
-                        <td><a href="chant2.html">Adi Da</a></td>
-                   <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Danavira Hero Of Giving</td>
+                        <td>Danavira Mela</td>
+                        <td>Danavira Mela, or "The Season of Light-In-Everybody," is a major festive season in Adidam running from early November to January 11th. 
+                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
 
                     <tr>
-                        <td><a href="chant3.html">Parama Guru Da Jayanthi</a></td>
-               <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
-                    </tr>
-                                        <tr>
-                        <td><a href="chant1.html">Om Ma Da (2)</a></td>
-                    <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Om Sri Adi Da</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
 
                     <tr>
-                        <td><a href="chant2.html">Adi Guru Da Jayanthi</a></td>
-                   <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Love-Ananda Adi Da</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
 
                     <tr>
-                        <td><a href="chant3.html">The Day Of Is - Peace (723)</a></td>
-            <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+                        <td>Om Sri Parama-Sapta-Na</td>
+                        <td>Occastion/Time details</td>
+                        <td>This chant is composed using 4 of the 23 formal mantras of invocation in Adidam.
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+
+                    <tr>
+                        <td>Om Ma Da</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
-                                      <tr>
-                        <td><a href="chant3.html">Universal World-Prayer Chant</a></td>
-          <td>Occastion/Time details</td>
-                        <td>Descritpions here....</td>
+
+                    <tr>
+                        <td>Om Ma Da</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                    </tr>
+
+                    <tr>
+                        <td>Om Sri Adi Da</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                    </tr>
+
+                    <tr>
+                        <td>Parama Guru Da Jayanthi</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                    </tr>
+
+                    <tr>
+                        <td>The Day Of Is - Peace (723)</td>
+                        <td>Occastion/Time details</td>
+                        <td>DLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                            < <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                    </tr>
+
+                    <tr>
+                        <td>Universal World-Prayer Chant</td>
+                        <td>Occastion/Time details</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
+                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
                     </tr>
                 </tbody>
 
