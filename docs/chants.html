@@ -36,6 +36,8 @@
             word-wrap: break-word;
         }
 
+
+
         .table thead th {
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -46,6 +48,20 @@
         .table td {
             vertical-align: middle;
         }
+
+        /* LIGHT ROW DIVIDERS */
+.table tbody tr {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table td {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
 
         /* MORE VISIBLE LINKS */
         .table a {
