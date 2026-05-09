@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sally Jamila</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background: #f5f5f3;
+            color: #111;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        /* NAV */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* HERO */
+
+.hero {
+    height: 82vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url('assets/img/sally-flower-2.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;   /* KEY CHANGE */
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 0 30px 60px;    /* pushes text slightly above bottom edge */
+}
+
+        .hero h1 {
+            font-family: 'Varela Round', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            padding: 120px 30px 110px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-family: 'Varela Round', sans-serif;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        .about p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 24px 120px;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: white;
+
+            margin-bottom: 22px;
+
+            overflow: hidden;
+
+            border-radius: 2px;
+        }
+
+        .project.reverse {
+            direction: rtl;
+        }
+
+        .project.reverse .project-text {
+            direction: ltr;
+            text-align: right;
+        }
+
+        .project-image {
+            min-height: 420px;
+        }
+
+        .project-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-text {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #111;
+        }
+
+        .project-text h3 {
+            margin-top: 0;
+            margin-bottom: 18px;
+
+            font-family: 'Varela Round', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+
+            color: white;
+        }
+
+        .project-text p {
+            margin: 0;
+            color: rgba(255,255,255,0.72);
+        }
+
+        .project-text a {
+            transition: opacity 0.2s ease;
+        }
+
+        .project-text a:hover {
+            opacity: 0.7;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: white;
+            border-top: 1px solid rgba(0,0,0,0.06);
+
+            padding: 70px 30px 50px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            max-width: 130px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .footer-email {
+            margin-bottom: 24px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .footer-copy {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .project,
+            .project.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .project.reverse .project-text {
+                text-align: left;
+            }
+
+            .project-image {
+                min-height: 320px;
+            }
+
+            .project-text {
+                padding: 40px 32px;
+            }
+
+            .nav-links {
+                gap: 18px;
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+
+    <nav class="nav">
+
+        <div class="nav-inner">
+
+            <div class="brand">
+                Sally Jamila
+            </div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+            <h1>Sally Jamila</h1>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2>Sally Jamila</h2>
+
+        <p>
+            Sally Jamila is a vocalist, performer and composer/arranger living in West Auckland. Her improvised and instrumental harmonic style reflects her journey through jazz and world-music. Born in New Zealand, Sally’s Cook Island-Tahitian roots have woven together with Croatia, and blended with her Indian heritage providing a rich fabric of influences.
+        </p>
+
+        <p>
+            Her music is diverse and interdisciplinary, revealing treasured fragments through artistry of tapu taonga. Having released her debut recorded work Invocation (2008), she shares her music in film, theatre, and multi-media. In amongst current projects: ACAPOLLiNATIONS, and the crucibulum she is currently collaborating in SAJA recording a new album due for release in 2025.
+        </p>
+
+        <p>
+            Sally’s passion is using her craft as a means for exploring narratives of universal meaning and profundity. In acknowledging the power and emotional force of music, she dedicates her spiritual life to the living practice of transformation through art.
+        </p>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+
+        <!-- Sacred Offerings -->
+
+        <div class="project">
+
+            <div class="project-image">
+                <img src="assets/img/FlowerDVM2021print_1.JPEG" alt="Sacred Offerings">
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    <a href="./sacredofferings.html">
+                        Sacred Offerings
+                    </a>
+                </h3>
+
+                <p>
+                    A collaboration with other artists creating a diverse catalogue of sacred works that include song, chant, soundscape with recitation and other instrumental works.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- SAJA -->
+
+        <div class="project">
+
+            <div class="project-image">
+                <img src="assets/img/SAJA_BioPhoto1.jpg" alt="SAJA">
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    <a href="https://jgab3103.github.io/SAJA/">
+                        SAJA
+                    </a>
+                </h3>
+
+                <p>
+                    SAJA is a collaboration with <a href="https://jamiegabriel.org/">Jamie Gabriel</a> (AUS) blending their areas of interest in music and technology through multi-disciplinary exploration. A co-lab of live performance, recorded song and lush soundscapes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ACAPOLLiNATIONS -->
+
+        <div class="project reverse">
+
+            <div class="project-image">
+                <img src="assets/img/AcapollinationsTrioSmile_0201.PNG" alt="ACAPOLLiNATIONS">
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    <a href="https://tuimamaki.com/acapollinations/">
+                        ACAPOLLiNATIONS
+                    </a>
+                </h3>
+
+                <p>
+                    A multi-lingual, compelling collection of folklore songs, where archaic musical systems are reimagined for three vivacious voices. Evocative melodies, stirringly close harmony and stories of longing, harvest and transcendence.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- the crucibulum -->
+
+        <div class="project">
+
+            <div class="project-image">
+                <img src="assets/img/Crucib.jpg" alt="the crucibulum">
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    <a href="https://robertmignault.com/the_crucibulum/">
+                        <i>the crucibulum</i>
+                    </a>
+                </h3>
+
+                <p>
+                    Co-created with <a href="https://robertmignault.com">Robert Mignault</a>, the crucibulum Experience is the Alchemy of Transformation. This large-scale, immersive and ‘performed’ art installation powerfully underscores the critical need for cultural and societal transformation and climate action.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Invocation -->
+
+        <div class="project reverse">
+
+            <div class="project-image">
+                <img src="assets/img/InvocationPhoto.jpg" alt="Invocation">
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    <a href="./invocation.html">
+                        Invocation
+                    </a>
+                </h3>
+
+                <p>
+                    A rich soundscape through meditative invocation, weaving together eclectic world music with the tradition of a spiritual practice. A debut album.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <img 
+            src="assets/img/chantLogo.png" 
+            alt="Logo"
+            class="footer-logo"
+        >
+
+        <div class="footer-email">
+            <a href="mailto:sally@abovethemandrake.co.nz">
+                sally@abovethemandrake.co.nz
+            </a>
+        </div>
+
+        <div class="footer-copy">
+            Copyright &copy; Sally Jamila 2024<br>
+            Photography by Sabine Mignault &amp; Robert Mignault
+        </div>
+
+    </footer>
+
+</body>
+</html>
