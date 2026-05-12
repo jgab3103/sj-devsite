@@ -22,6 +22,8 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        /* NAV (MATCH OTHER PAGE) */
+
         .simple-nav {
             background: rgba(255,255,255,0.96);
             backdrop-filter: blur(8px);
@@ -55,19 +57,23 @@
             box-shadow: none !important;
         }
 
+        /* IMPORTANT FIX FOR FIXED NAV */
         .projects-section {
             padding-top: 140px;
             padding-bottom: 100px;
         }
 
+        /* BACKGROUND */
         .chants-bg {
-            background:
+            background: 
                 linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
                 url('assets/img/background3.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
+        /* TABLE */
 
         .table-wrapper {
             background: white;
@@ -118,6 +124,8 @@
             color: #084298;
         }
 
+        /* SEARCH */
+
         .search-box {
             max-width: 500px;
             width: 100%;
@@ -125,48 +133,38 @@
             padding: 12px 18px;
             border: 1px solid #ddd;
             text-align: center;
+            transition: all 0.2s ease;
         }
 
-        /* TAG STYLE */
-/* LIGHT BLUE TAG STYLE */
-
-.tag {
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 2px 4px 2px 0;
-    font-size: 0.75rem;
-    border-radius: 999px;
-
-    background: linear-gradient(#f7fbff, #e6f3ff);
-    border: 1px solid rgba(120, 170, 220, 0.35);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.9),
-        0 1px 2px rgba(0,0,0,0.06);
-
-    color: #1f4e79;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-}
-
-.tag:hover {
-    background: linear-gradient(#eef7ff, #d9ecff);
-    border-color: rgba(120, 170, 220, 0.55);
-    cursor: default;
-}
+        .search-box:focus {
+            border-color: #999;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 
 <body id="page-top">
 
+<!-- NAVIGATION (ONLY CHANGE IN FILE) -->
+
 <nav class="navbar navbar-expand-lg fixed-top simple-nav">
+
     <div class="container px-4 px-lg-5">
 
         <a class="navbar-brand" href="./index.html">
             Sally Jamila
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <button 
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
             <i class="fas fa-bars"></i>
         </button>
 
@@ -191,14 +189,29 @@
         </div>
 
     </div>
+
 </nav>
+
+<!-- MAIN SECTION (UNCHANGED CONTENT BELOW THIS LINE) -->
 
 <section class="projects-section chants-bg">
 
     <div class="container px-4 px-lg-5">
 
+        <!-- <a href="./sacredofferings.html">← back</a> -->
+
+        <br/><br/>
+
+        <!-- <h3 class="mb-4">Chants</h3> -->
+
         <div class="mb-4 d-flex justify-content-center">
-            <input type="text" id="searchInput" class="form-control search-box" placeholder="Search" onkeyup="filterTable()">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="form-control search-box"
+                placeholder="Search"
+                onkeyup="filterTable()"
+            >
         </div>
 
         <div class="table-wrapper">
@@ -219,7 +232,7 @@
                         <td>Adi Da</td>
                         <td>Mahasamadhi</td>
                         <td>
-                           <span class="tag">Contemplative</span>
+                           Contemplative
                             <br/><a href="./assets/pdf-files/AdiDa.pdf">PDF Score</a> || <a href="ChantAdiDa.html">Details</a>
                         </td>
                     </tr>
@@ -228,9 +241,7 @@
                         <td>Adi Guru Da Jayanthi</td>
                         <td>Da Jayanthi</td>
                         <td>
-                            <span class="tag">Medium/Upbeat</span>
-                            <span class="tag">Kirtan</span>
-                            <span class="tag">Ragaam: Brindavani</span>
+                            Medium/Upbeat, Kirtan. Ragaam: Brindavani
                             <br/><a href="./assets/pdf-files/AdiGuruDaJayanthi.pdf">PDF Score</a> || <a href="ChantAdiGuruDaJayanthi.html">Details</a>
                         </td>
                     </tr>
@@ -239,10 +250,7 @@
                         <td>Da Purnima (The Light of Grace)</td>
                         <td>Da Purnima</td>
                         <td>
-                            <span class="tag">Bhajan</span>
-                            <span class="tag">Slow</span>
-                            <span class="tag">Contemplative</span>
-                            <span class="tag">Prasad</span>
+                            Bhajan, Slow, Contemplative, Prasad
                             <br/><a href="./assets/pdf-files/DaPurnimaTheLightOfGrace.pdf">PDF Score</a> || <a href="ChantDaPurnimaTheLightOfGrace.html">Details</a>
                         </td>
                     </tr>
@@ -251,20 +259,16 @@
                         <td>Danavira Hero Of Giving</td>
                         <td>Danavira Mela</td>
                         <td>
-                            <span class="tag">Medium</span>
-                            <span class="tag">Upbeat</span>
-                            <span class="tag">Energetic</span>
-                            <span class="tag">Kirtan</span>
+                            Medium, Upbeat, Energetic, Kirtan
                             <br/><a href="./assets/pdf-files/DanaviraHeroOfGiving.pdf">PDF Score</a> || <a href="./ChantDanaviraHeroOfGiving.html">Details</a>
                         </td>
                     </tr>
 
                     <tr>
                         <td>Love-Ananda Adi Da</td>
-                        <td>Da Purnima, Anytime</td>
+                        <td>Occasion/Time details</td>
                         <td>
-                            <span class="tag">Medium</span>
-                            <span class="tag">Upbeat</span>
+                            Medium, Upbeat
                             <br/><a href="./assets/pdf-files/Love-AnandaAdiDa.pdf">PDF Score</a> || <a href="ChantLove-AnandaAdiDa.html">Details</a>
                         </td>
                     </tr>
@@ -273,8 +277,7 @@
                         <td>Om Sri Parama-Sapta-Na</td>
                         <td>Bhajan</td>
                         <td>
-                            <span class="tag">Contemplative</span>
-                            <span class="tag">Medium</span>
+                            Contemplative, Medium
                             <br/><a href="./assets/pdf-files/OmSriParama-Sapta-Na.pdf">PDF Score</a> || <a href="./ChantOmSriParama-Sapta-Na.html">Details</a>
                         </td>
                     </tr>
@@ -283,8 +286,7 @@
                         <td>Om Ma Da</td>
                         <td>Mantra, Da Mahasamadhi</td>
                         <td>
-                            <span class="tag">Contemplative</span>
-                            <span class="tag">Slow</span>
+                            Contemplative, Slow
                             <br/><a href="./assets/pdf-files/OmMaDa.pdf">PDF Score</a> || <a href="ChantOmMaDa.html">Details</a>
                         </td>
                     </tr>
@@ -293,8 +295,7 @@
                         <td>Om Sri Adi Da</td>
                         <td>Da Purnima</td>
                         <td>
-                            <span class="tag">Medium</span>
-                            <span class="tag">Upbeat</span>
+                            Medium, Upbeat
                             <br/><a href="./assets/pdf-files/OmSriAdiDa.pdf">PDF Score</a> || <a href="ChantOmSriAdiDa.html">Details</a>
                         </td>
                     </tr>
@@ -303,8 +304,7 @@
                         <td>Parama Guru Da Jayanthi</td>
                         <td>Da Jayanthi</td>
                         <td>
-                            <span class="tag">Lorem ipsum</span>
-                            <br/><a href="./assets/pdf-files/ParamaGuruDaJayanthi.pdf">PDF Score</a> || <a href="ChantParamaGuruDaJayanthi.html">Details</a>
+                            Lorem ipsum                             <br/><a href="./assets/pdf-files/ParamaGuruDaJayanthi.pdf">PDF Score</a> || <a href="ChantParamaGuruDaJayanthi.html">Details</a>
                         </td>
                     </tr>
 
@@ -312,19 +312,16 @@
                         <td>The Day Of Is - Peace (723)</td>
                         <td>723, July 23rd</td>
                         <td>
-                            <span class="tag">Contemplative</span>
-                            <span class="tag">Slow</span>
+                            Contemplative, Slow
                             <br/><a href="./assets/pdf-files/TheDayOfIs-Peace723.pdf">PDF Score</a> || <a href="ChantTheDayOfIs-Peace723.html">Details</a>
                         </td>
                     </tr>
 
                     <tr>
                         <td>Universal World-Prayer Chant</td>
-                        <td>Anytime, New Year</td>
+                        <td>Anytime, New Year, Universal Prayer</td>
                         <td>
-                            <span class="tag">Prayer</span>
-                            <span class="tag">Contemplative</span>
-                            <span class="tag">Bhajan</span>
+                            Prayer, Contemplative,  Bhajan
                             <br/><a href="./assets/pdf-files/TheUniversalWorld-PrayerChant.pdf">PDF Score</a> || <a href="ChantTheUniversalWorld-Prayer.html">Details</a>
                         </td>
                     </tr>
@@ -338,6 +335,8 @@
     </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer class="footer small text-center"
     style="background:#fff;padding:50px 0 40px;border-top:1px solid rgba(0,0,0,0.08);">
