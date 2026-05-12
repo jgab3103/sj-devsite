@@ -24,7 +24,6 @@
             border-radius: 4px;
         }
 
-        /* MAKE COLUMNS EVEN */
         .table {
             table-layout: fixed;
             width: 100%;
@@ -36,8 +35,6 @@
             word-wrap: break-word;
         }
 
-
-
         .table thead th {
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -47,35 +44,29 @@
 
         .table td {
             vertical-align: middle;
+            padding-top: 18px;
+            padding-bottom: 18px;
         }
 
-        /* LIGHT ROW DIVIDERS */
-.table tbody tr {
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-}
+        .table tbody tr {
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
 
-.table tbody tr:last-child {
-    border-bottom: none;
-}
+        .table tbody tr:last-child {
+            border-bottom: none;
+        }
 
-.table td {
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
-        /* MORE VISIBLE LINKS */
         .table a {
             text-decoration: none;
-            color: #0d6efd; /* Bootstrap blue */
+            color: #0d6efd;
             font-weight: 600;
         }
 
         .table a:hover {
             text-decoration: underline;
-            color: #084298; /* darker on hover */
+            color: #084298;
         }
 
-        /* SEARCH BOX STYLING */
         .search-box {
             max-width: 500px;
             width: 100%;
@@ -96,15 +87,13 @@
 
 <body id="page-top">
 
-<!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="./index.html">Sally Jamila</a>
     </div>
 </nav>
 
-<!-- CONTENT -->
-<section class="projects-section pt-5" id="projects"
+<section class="projects-section pt-5"
     style="
         background: 
             linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
@@ -120,7 +109,6 @@
 
         <h3 class="mb-4">Chants</h3>
 
-        <!-- SEARCH (CENTERED) -->
         <div class="mb-4 d-flex justify-content-center">
             <input 
                 type="text" 
@@ -131,7 +119,6 @@
             >
         </div>
 
-        <!-- TABLE -->
         <div class="table-wrapper">
 
             <table class="table table-borderless">
@@ -145,96 +132,108 @@
                 </thead>
 
                 <tbody>
+
                     <tr>
                         <td>Adi Da</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                          <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/AdiDa.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Adi Guru Da Jayanthi</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/AdiGuruDaJayanthi.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Da Purnima (The Light of Grace)</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                        <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
-                    </td>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/DaPurnimaTheLightOfGrace.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Danavira Hero Of Giving</td>
                         <td>Danavira Mela</td>
-                        <td>Danavira Mela, or "The Season of Light-In-Everybody," is a major festive season in Adidam running from early November to January 11th. It focuses on recognizing divine light in all people, gift-giving, and celebrating the "Divine Self-Emergence" of Adi Da Samraj. 
-                            <br/><a href="./assets/pdf-files/Danavira_Hero_Of_Giving.pdf">PDF Score</a> || <a href="./Danavira-hero-of-giving.html">Details</a>
+                        <td>
+                            Danavira Mela, or "The Season of Light-In-Everybody," is a major festive season in Adidam running from early November to January 11th. It focuses on recognizing divine light in all people, gift-giving, and celebrating the "Divine Self-Emergence" of Adi Da Samraj.
+                            <br/><a href="./assets/pdf-files/DanaviraHeroOfGiving.pdf">PDF Score</a> || <a href="./Danavira-hero-of-giving.html">Details</a>
+                        </td>
                     </tr>
 
-                    <tr>
-                        <td>Om Sri Adi Da</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
-                    </tr>
+
 
                     <tr>
                         <td>Love-Ananda Adi Da</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/Love-AnandaAdiDa.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Om Sri Parama-Sapta-Na</td>
                         <td>Bhajan</td>
-                        <td>This chant is composed using 4 of the 23 formal mantras of invocation in Adidam.
-                             <br/><a href="#">PDF Score</a> || <a href="./OmSriParama-Sapta-Na.html">Details</a>
-
-                    <tr>
-                        <td>Om Ma Da (I)</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>
+                            This chant is composed using 4 of the 23 formal mantras of invocation in Adidam.
+                            <br/><a href="./assets/pdf-files/OmSriParama-Sapta-Na.pdf">PDF Score</a> || <a href="./OmSriParama-Sapta-Na.html">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
-                        <td>Om Ma Da (II)</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                            <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Om Ma Da</td>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/OmMaDa.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Om Sri Adi Da</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/OmSriAdiDa.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Parama Guru Da Jayanthi</td>
-                        <td>Occastion/Time details</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                             <br/><a href="#">PDF Score</a> || <a href="#">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/ParamaGuruDaJayanthi.pdf">PDF Score</a> || <a href="#">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>The Day Of Is - Peace (723)</td>
-                        <td>Occastion/Time details</td>
-                        <td>DLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. 
-                            <br/><a href="#">PDF Score</a> || <a href="TheDayOfIs-Peace723.html">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                            <br/><a href="./assets/pdf-files/TheDayOfIs-Peace723.pdf">PDF Score</a> || <a href="TheDayOfIs-Peace723.html">Details</a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Universal World-Prayer Chant</td>
-                        <td>Occastion/Time details</td>
-                        <td>(A Prayer To The Heart Of Reality, Proposed By The Divine World-Teacher, Ruchira Avatar Adi Da Samraj, For Non-Sectarian Use By All Of Mankind) 
-                             <br/><a href="#">PDF Score</a> || <a href="TheUniversalWorld-Prayer.html">Details</a>
+                        <td>Occasion/Time details</td>
+                        <td>
+                            (A Prayer To The Heart Of Reality, Proposed By The Divine World-Teacher, Ruchira Avatar Adi Da Samraj, For Non-Sectarian Use By All Of Mankind)
+                            <br/><a href="./assets/pdf-files/TheUniversalWorld-PrayerChant.pdf">PDF Score</a> || <a href="TheUniversalWorld-Prayer.html">Details</a>
+                        </td>
                     </tr>
+
                 </tbody>
 
             </table>
@@ -244,40 +243,16 @@
     </div>
 </section>
 
-<!-- FOOTER -->
-<!-- FOOTER -->
-<footer 
-    class="footer small text-center"
-    style="
-        background-color: #ffffff;
-        padding: 50px 0 40px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-    "
->
+<footer class="footer small text-center"
+    style="background:#fff;padding:50px 0 40px;border-top:1px solid rgba(0,0,0,0.08);">
+
     <div class="container px-4 px-lg-5">
 
-        <!-- LOGO -->
         <div class="mb-4">
-            <img 
-                src="assets/img/chantLogo.png" 
-                alt="Chant Logo"
-                style="
-                    max-width: 140px;
-                    width: 100%;
-                    height: auto;
-                    opacity: 0.95;
-                "
-            >
+            <img src="assets/img/chantLogo.png" style="max-width:140px;width:100%;opacity:0.95;">
         </div>
 
-        <!-- COPYRIGHT -->
-        <div 
-            style="
-                color: #666;
-                font-size: 0.9rem;
-                line-height: 1.8;
-            "
-        >
+        <div style="color:#666;font-size:0.9rem;line-height:1.8;">
             Copyright &copy; Sally Jamila 2024<br/>
             Photography by Sabine Mignault &amp; Robert Mignault
         </div>
@@ -285,17 +260,14 @@
     </div>
 </footer>
 
-<!-- SCRIPT -->
 <script>
 function filterTable() {
     const input = document.getElementById("searchInput");
     const filter = input.value.toLowerCase();
-
     const rows = document.querySelectorAll("tbody tr");
 
     rows.forEach(row => {
-        const text = row.innerText.toLowerCase();
-        row.style.display = text.includes(filter) ? "" : "none";
+        row.style.display = row.innerText.toLowerCase().includes(filter) ? "" : "none";
     });
 }
 </script>
