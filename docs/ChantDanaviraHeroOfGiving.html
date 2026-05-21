@@ -19,34 +19,59 @@
 
 <style>
 
-body {
-    font-family: 'Nunito', sans-serif;
+/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+    background: #F7EEE4;
 }
 
-/* NAV FIX (MATCH ALL OTHER PAGES) */
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #F7EEE4;
+    color: #111;
+}
 
+/* LINKS */
+a {
+    color: #A31635;
+    text-decoration: underline;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+    color: #1E4A3A;
+    opacity: 1;
+}
+
+a:active {
+    color: #1E4A3A;
+}
+
+a:visited {
+    color: #A31635;
+}
+
+/* NAV */
 .simple-nav {
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background: #F7EEE4 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    min-height: 80px;
+    transition: none !important;
 }
 
 .simple-nav .navbar-brand {
     color: #111 !important;
     font-family: 'Varela Round', sans-serif;
-    letter-spacing: 1px;
 }
 
 .simple-nav .nav-link {
-    color: #555 !important;
-    font-size: 0.95rem;
-    margin-left: 18px;
+    color: #111 !important;
+    opacity: 1 !important;
 }
 
 .simple-nav .nav-link:hover {
-    color: #000 !important;
+    opacity: 0.6;
 }
 
 .navbar-toggler {
@@ -54,21 +79,18 @@ body {
     box-shadow: none !important;
 }
 
-.navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-/* SPACE FOR FIXED NAV */
+/* PAGE LAYOUT */
 .projects-section {
-    padding-top: 140px;
+    padding-top: 0;
+    padding-bottom: 120px;
+    margin-top: 0;
 }
 
-/* CONTENT */
-
+/* TEXT BOX (FIXED BACKGROUND COLOR HERE) */
 .content-wrapper {
     max-width: 800px;
-    margin: 100px auto 0 auto;
-    background: white;
+    margin: 220px auto 0 auto;
+    background: #F7EEE4; /* <-- CHANGED FROM WHITE */
     padding: 40px;
     border-radius: 6px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -83,26 +105,58 @@ body {
     margin-bottom: 16px;
 }
 
-/* OCCASION BLOCKQUOTE STYLE */
-
+/* OCCASION BLOCK */
 .occasion-quote {
-    border-left: 0px solid rgba(0,0,0,0.12);
-    padding-left: 24px;
+    padding: 18px;
     margin-top: 10px;
     margin-bottom: 30px;
 
     color: #555;
     font-size: 1.02rem;
     line-height: 1.9;
-
     font-style: italic;
 
     background: rgba(0,0,0,0.02);
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-right: 18px;
-
     border-radius: 4px;
+}
+
+/* FOOTER */
+.footer {
+    background: #F7EEE4;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 70px 30px 50px;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 130px;
+    margin: 0 auto 30px;
+    opacity: 0.95;
+}
+
+.footer-email {
+    margin-bottom: 24px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.footer-copy {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.occasion-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.occasion-image img {
+    max-width: 420px;   /* <-- adjust size here */
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 4px; /* optional, keeps style consistent */
 }
 
 </style>
@@ -111,24 +165,14 @@ body {
 
 <body id="page-top">
 
-<!-- NAVIGATION (FIXED) -->
 <nav class="navbar navbar-expand-lg fixed-top simple-nav">
-
     <div class="container px-4 px-lg-5">
 
         <a class="navbar-brand" href="./index.html">
             Sally Jamila
         </a>
 
-        <button 
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <i class="fas fa-bars"></i>
         </button>
 
@@ -153,89 +197,71 @@ body {
         </div>
 
     </div>
-
 </nav>
-
-<!-- CONTENT -->
 
 <section class="projects-section pt-5"
     style="
         background: 
             linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-            url('assets/img/DanaviraMelaBackground.png');
+            url('assets/img/DanaviraMelaBORDER.png');
 
-        background-size: 500px auto;
-        background-repeat: repeat;
-        background-position: top center;
+        background-size: cover;
+        background-position: center 60px;
+        background-repeat: no-repeat;
     "
 >
 
 <br/>
 
-    <div class="container px-4 px-lg-5">
+<div class="container px-4 px-lg-5">
 
-    
+    <div class="content-wrapper">
 
-        <div class="content-wrapper">
+        <h2>Danavira Hero Of Giving</h2>
 
-            <h2>Danavira Hero Of Giving</h2>
+        <p>
+            This chant was written for the raising of the Divine Spirit-Tree of Light. 
+        </p>
 
-            <p>
-                This chant was written for the raising of the diving Spirit-Tree of Light
-            </p>
-<div class="text-center">
-    <a href="./assets/pdf-files/DanaviraHeroOfGiving.pdf">PDF Score</a>
+        <div class="text-center">
+            <a href="./assets/pdf-files/AdiDa.pdf">PDF Score</a>
+        </div>
+
+        <br/>
+
+   <div class="occasion-image">
+    <img src="assets/img/DanaviraMelaQuote.png" alt="Danavira Mela">
 </div>
-<br/>           
+<br/>
 
-            <div class="occasion-quote">
+        <div class="occasion-quote">
 
-                <b>Danavira Mela</b><br/>
-Danavira Mela, or “The Season of Light-In-Everybody,” is a major festive season in Adidam observed from early November through January 11. This sacred season emphasises recognising the divine light present in all people, the spirit of gift-giving, and the celebration of the “Divine Self-Emergence” of Adi Da Samraj.
+            <b>Danavira Mela</b><br/><br/>
 
-            </div>
+           Danavira Mela, or “The Season of Light-In-Everybody,” is a major festive season in Adidam observed from early November through January 11. This sacred season emphasises recognising the divine light present in all people, the spirit of gift-giving, and the celebration of the “Divine Self-Emergence” of Adi Da Samraj.
 
         </div>
 
+     
+
     </div>
+
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer 
-    class="footer small text-center"
-    style="
-        background-color: #ffffff;
-        padding: 50px 0 40px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-    "
->
-    <div class="container px-4 px-lg-5">
+<footer class="footer">
 
-        <div class="mb-4">
-            <img 
-                src="assets/img/LGEHibiscusLOGO.png" 
-                alt="Chant Logo"
-                style="
-                    max-width: 140px;
-                    width: 100%;
-                    height: auto;
-                    opacity: 0.95;
-                "
-            >
-        </div>
+    <img src="assets/img/LGEHibiscusLOGOTransparent.png" class="footer-logo" />
 
-        <div 
-            style="
-                color: #666;
-                font-size: 0.9rem;
-                line-height: 1.8;
-            "
-        >
-            Copyright &copy; Sally Jamila 2024<br/>
-            Photography by Sabine Mignault &amp; Robert Mignault
-        </div>
-
+    <div class="footer-email">
+        sally@sallyjamila.com
     </div>
+
+    <div class="footer-copy">
+        Copyright &copy; Sally Jamila 2024<br>
+        Photography by Sabine Mignault &amp; Robert Mignault
+    </div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

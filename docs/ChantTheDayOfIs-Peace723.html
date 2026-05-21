@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Danavira, Hero Of Giving - Sally Jamila</title>
+    <title>CHANT</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -17,91 +17,149 @@
     <!-- Core CSS -->
     <link href="css/styles.css" rel="stylesheet" />
 
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
+<style>
 
-        /* NAV FIX (MATCH YOUR OTHER PAGES) */
-        .simple-nav {
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
+/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+    background: #F7EEE4;
+}
 
-        .simple-nav .navbar-brand {
-            color: #111 !important;
-            font-family: 'Varela Round', sans-serif;
-            letter-spacing: 1px;
-        }
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #F7EEE4;
+    color: #111;
+}
 
-        .simple-nav .nav-link {
-            color: #555 !important;
-            font-size: 0.95rem;
-            margin-left: 18px;
-        }
+/* LINKS */
+a {
+    color: #A31635;
+    text-decoration: underline;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
 
-        .simple-nav .nav-link:hover {
-            color: #000 !important;
-        }
+a:hover {
+    color: #1E4A3A;
+    opacity: 1;
+}
 
-        .navbar-toggler {
-            border: none;
-            box-shadow: none !important;
-        }
+a:active {
+    color: #1E4A3A;
+}
 
-        .navbar-toggler:focus {
-            box-shadow: none !important;
-        }
+a:visited {
+    color: #A31635;
+}
 
-        /* SPACE FOR FIXED NAV */
-        .projects-section {
-            padding-top: 140px;
-        }
+/* NAV */
+.simple-nav {
+    background: #F7EEE4 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    min-height: 80px;
+    transition: none !important;
+}
 
-        /* YOUR EXISTING CONTENT STYLE (UNCHANGED) */
-        .content-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 6px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
+.simple-nav .navbar-brand {
+    color: #111 !important;
+    font-family: 'Varela Round', sans-serif;
+}
 
-        .content-wrapper h2 {
-            margin-bottom: 20px;
-        }
+.simple-nav .nav-link {
+    color: #111 !important;
+    opacity: 1 !important;
+}
 
-        .content-wrapper p {
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-    </style>
+.simple-nav .nav-link:hover {
+    opacity: 0.6;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+/* PAGE LAYOUT */
+.projects-section {
+    padding-top: 0;
+    padding-bottom: 120px;
+    margin-top: 0;
+}
+
+/* TEXT BOX (FIXED BACKGROUND COLOR HERE) */
+.content-wrapper {
+    max-width: 800px;
+    margin: 180px auto 0 auto;
+    background: #F7EEE4; /* <-- CHANGED FROM WHITE */
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.content-wrapper h2 {
+    margin-bottom: 20px;
+}
+
+.content-wrapper p {
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* OCCASION BLOCK */
+.occasion-quote {
+    padding: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    color: #555;
+    font-size: 1.02rem;
+    line-height: 1.9;
+    font-style: italic;
+
+    background: rgba(0,0,0,0.02);
+    border-radius: 4px;
+}
+
+/* FOOTER */
+.footer {
+    background: #F7EEE4;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 70px 30px 50px;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 130px;
+    margin: 0 auto 30px;
+    opacity: 0.95;
+}
+
+.footer-email {
+    margin-bottom: 24px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.footer-copy {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+</style>
+
 </head>
 
 <body id="page-top">
 
-<!-- NAVIGATION (FIXED) -->
 <nav class="navbar navbar-expand-lg fixed-top simple-nav">
-
     <div class="container px-4 px-lg-5">
 
         <a class="navbar-brand" href="./index.html">
             Sally Jamila
         </a>
 
-        <button 
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <i class="fas fa-bars"></i>
         </button>
 
@@ -128,98 +186,85 @@
     </div>
 </nav>
 
-<!-- CONTENT -->
 <section class="projects-section pt-5"
     style="
         background: 
             linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-            url('assets/img/background3.jpeg');
+            url('assets/img/MahasamadhiBORDER.png');
+
         background-size: cover;
-        background-position: center;
+        background-position: center 60px;
         background-repeat: no-repeat;
     "
 >
-    <div class="container px-4 px-lg-5">
 
-        <a href="./chants.html">back</a><br/><br/>
+<br/>
 
-        <div class="content-wrapper">
+<div class="container px-4 px-lg-5">
 
-            <h2>The Day of Is-Peace 723</h2>
+    <div class="content-wrapper">
 
-            <p>
-                The Day of Is-Peace 723 is the day devotees of Adi Da Samraj honour His Revelation (in <em>Not-Two Is Peace</em>) of July 23, 2006, as “the precise and decisive moment of the uniquely new human necessity for all of humankind”.
-            </p>
+        <h2>The Day Of Is-Peace (723)</h2>
 
-            <p>
-                It is a crucially important day when devotees of Adi Da Samraj invoke His Blessing Power and Grace into the world and celebrate His Profound Message of Cooperation, Tolerance and Peace.
-            </p>
+        <p>
+            This chant was composed in celebration and commemoration of the 23rd of July. Once familiar, it may be sung collectively in unison. Alternatively it can be offered in a call-and-response form that invites shared participation and contemplative engagement.
+        </p>
 
-            <blockquote>
-                <p>
-                    “I have Come to Initiate a truly Divine New Age of Real-God-Man, by Means of My forever Divine Avataric Self-"Emergence" here and every "where" in the cosmic domain.
-                </p>
-
-                <p>
-                    I have Come to Turn humankind (and even all beings, and even the cosmic All Itself) to My Own Avatarically Self-Revealed (and Self-Evidently Divine) Person, the "Bright" Reality and Truth and Self-Nature and Self-Condition and Source-Condition and Self-State of all-and-All.
-                </p>
-
-                <p>
-                    I Have Come to Found (and, altogether, to Make Possible) a New (and Truly "Bright") Age of humankind--an Age That will not begin on the basis of the seeking mummery of ego-bondage, but an Age in Which the global totality of humankind will apply itself (apart from all dilemma and all seeking) to the Inherently Harmonious Event of Real existence (in the Always Already present-time "Bright" Divine Reality That Is the One and Only Reality Itself).”
-                </p>
-            </blockquote>
-
-            <p>
-                — Adi Da Samraj, © ASA 2021
-            </p>
-
-            <p>
-                <a href="https://www.da-peace.org/" target="_blank">
-                    www.da-peace.org
-                </a>
-            </p>
-
+        <div class="text-center">
+            <a href="./assets/pdf-files/AdiDa.pdf">PDF Score</a>
         </div>
 
+        <br/>
+
+      <div class="occasion-quote">
+
+    <b>The Day of Is-Peace 723</b><br/><br/>
+
+    <p>
+        The Day of Is-Peace 723 is observed by devotees of Adi Da Samraj in honour of His Revelation, <i>Not-Two Is Peace</i>, given on July 23, 2006.
+    </p>
+
+    <p>
+        Adi Da described this Revelation as “the precise and decisive moment of the uniquely new human necessity for all of humankind.” It is regarded as a profoundly important occasion during which devotees invoke His Blessing Power and Grace into the world, while celebrating His message of cooperation, tolerance, and peace.
+    </p>
+
+    <p>
+        As Adi Da Samraj declared:
+    </p>
+
+    <blockquote>
+        “I have Come to Initiate a truly Divine New Age of Real-God-Man, by Means of My forever Divine Avataric Self-‘Emergence’ here and every ‘where’ in the cosmic domain.
+
+        I have Come to Turn humankind (and even all beings, and even the cosmic All Itself) to My Own Avatarically Self-Revealed (and Self-Evidently Divine) Person, the ‘Bright’ Reality and Truth and Self-Nature and Self-Condition and Source-Condition and Self-State of all-and-All.
+
+        I Have Come to Found (and, altogether, to Make Possible) a New (and Truly ‘Bright’) Age of humankind—an Age That will not begin on the basis of the seeking mummery of ego-bondage, but an Age in Which the global totality of humankind will apply itself (apart from all dilemma and all seeking) to the Inherently Harmonious Event of Real existence (in the Always Already present-time ‘Bright’ Divine Reality That Is the One and Only Reality Itself).”
+    </blockquote>
+
+    <p style="margin-top: 20px;">
+        — Adi Da Samraj, © ASA 2021<br/>
+        <a href="https://da-peace.org" target="_blank" rel="noopener">da-peace.org</a>
+    </p>
+
+</div>
+
     </div>
+
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer 
-    class="footer small text-center"
-    style="
-        background-color: #ffffff;
-        padding: 50px 0 40px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-    "
->
-    <div class="container px-4 px-lg-5">
+<footer class="footer">
 
-        <div class="mb-4">
-            <img 
-                src="assets/img/chantLogo.png" 
-                alt="Chant Logo"
-                style="
-                    max-width: 140px;
-                    width: 100%;
-                    height: auto;
-                    opacity: 0.95;
-                "
-            >
-        </div>
+    <img src="assets/img/LGEHibiscusLOGOTransparent.png" class="footer-logo" />
 
-        <div 
-            style="
-                color: #666;
-                font-size: 0.9rem;
-                line-height: 1.8;
-            "
-        >
-            Copyright &copy; Sally Jamila 2024<br/>
-            Photography by Sabine Mignault &amp; Robert Mignault
-        </div>
-
+    <div class="footer-email">
+        sally@sallyjamila.com
     </div>
+
+    <div class="footer-copy">
+        Copyright &copy; Sally Jamila 2024<br>
+        Photography by Sabine Mignault &amp; Robert Mignault
+    </div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

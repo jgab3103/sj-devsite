@@ -22,7 +22,10 @@
 
 <style>
 
-/* GLOBAL */
+/* =========================
+   GLOBAL
+   ========================= */
+
 html {
     scroll-behavior: smooth;
     background: #F7EEE4;
@@ -36,33 +39,65 @@ body {
     line-height: 1.7;
 }
 
+/* =========================
+   CONTENT LINKS ONLY
+   ========================= */
+
 a {
-    color: inherit;
-    text-decoration: none;
+    color: #A31635;
+    text-decoration: underline;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-img {
-    width: 100%;
-    display: block;
+a:hover {
+    color: #1E4A3A;
+    opacity: 1;
 }
 
-/* NAV — FIXED STYLE, NO SCROLL CHANGES */
+a:active {
+    color: #1E4A3A;
+}
+
+a:visited {
+    color: #A31635;
+}
+
+/* =========================
+   NAV LOCKED (NO INHERITANCE)
+   ========================= */
+
+#mainNav a,
+#mainNav a:visited,
+#mainNav a:hover,
+#mainNav a:active {
+    color: #111 !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
+}
+
+/* subtle nav hover only */
+#mainNav .nav-link:hover {
+    opacity: 0.6;
+}
+
+/* brand override safety */
+#mainNav .navbar-brand {
+    color: #111 !important;
+    text-decoration: none !important;
+}
+
+/* =========================
+   NAV STRUCTURE
+   ========================= */
 
 #mainNav,
 #mainNav.navbar-shrink {
-
     background: #F7EEE4 !important;
-
     backdrop-filter: none !important;
-
     border-bottom: 1px solid rgba(0,0,0,0.08);
-
     min-height: 80px;
-
     transition: none !important;
 }
-
-/* keep ALL text same colour */
 
 #mainNav .navbar-brand,
 #mainNav .nav-link,
@@ -70,66 +105,53 @@ img {
 #mainNav.navbar-shrink .navbar-brand,
 #mainNav.navbar-shrink .nav-link,
 #mainNav.navbar-shrink .navbar-toggler {
-
     color: #111 !important;
-
     opacity: 1 !important;
-
-    transition: none !important;
 }
 
-/* hover remains subtle */
-
-#mainNav .nav-link:hover {
-    opacity: 0.6;
-}
-
-/* remove Bootstrap active colour changes */
-
-#mainNav .nav-link.active,
-#mainNav .navbar-brand:hover {
-    color: #111 !important;
-}
-
-/* remove any shadow added on scroll */
-
+/* remove Bootstrap effects */
 #mainNav.navbar-shrink {
     box-shadow: none !important;
 }
 
-/* HERO */
+/* =========================
+   GLOBAL MEDIA
+   ========================= */
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
 .masthead {
-
-    /* always start BELOW fixed nav */
     margin-top: 80px;
-
-    /* keep visible hero height consistent */
     height: calc(100vh - 80px);
-
     background:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url('assets/img/sally-flower-2.jpg');
-
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 /* MOBILE */
 @media (max-width: 991px) {
-
-    #mainNav {
-        min-height: 72px;
-    }
+    #mainNav { min-height: 72px; }
 
     .masthead {
         margin-top: 72px;
         height: calc(100vh - 72px);
     }
-
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+   ========================= */
+
 .about-section {
     background: #F7EEE4;
 }
@@ -142,7 +164,10 @@ img {
     color: #333;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+   ========================= */
+
 .projects {
     max-width: 1250px;
     margin: auto;
@@ -150,32 +175,17 @@ img {
 }
 
 .project {
-    position: relative;
-    cursor: pointer;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     background: rgba(255,255,255,0.25);
-
     margin-bottom: 22px;
     overflow: hidden;
-
     border-radius: 2px;
-}
-
-.project.reverse {
-    direction: rtl;
-}
-
-.project.reverse .project-text {
-    direction: ltr;
-    text-align: right;
+    position: relative;
 }
 
 .project-image {
-     height: 310px;
-   
+    height: 310px;
 }
 
 .project-image img {
@@ -188,18 +198,14 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     background: rgba(247, 238, 228, 0.9);
 }
 
 .project-text h3 {
-    margin-top: 0;
-    margin-bottom: 18px;
-
+    margin: 0 0 18px;
     font-family: 'Varela Round', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-
     color: #111;
 }
 
@@ -208,19 +214,13 @@ img {
     color: #333;
 }
 
-/* FULL ROW CLICKABLE */
-.project-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
+/* =========================
+   FOOTER
+   ========================= */
 
-/* FOOTER */
 .footer {
     background: #F7EEE4;
     border-top: 1px solid rgba(0,0,0,0.08);
-
     padding: 70px 30px 50px;
     text-align: center;
 }
@@ -243,17 +243,13 @@ img {
     line-height: 1.8;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 900px) {
-
-    .project,
-    .project.reverse {
+    .project {
         grid-template-columns: 1fr;
-        direction: ltr;
-    }
-
-    .project.reverse .project-text {
-        text-align: left;
     }
 
     .project-image {
