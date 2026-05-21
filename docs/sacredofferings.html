@@ -1,74 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Sally Jamila</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Sally Jamila</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,700" rel="stylesheet" />
 
-    <!-- Core theme CSS -->
-    <link href="css/styles.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
 
 <style>
 
+/* GLOBAL MATCH MAIN SITE */
+html {
+    scroll-behavior: smooth;
+    background: #F7EEE4;
+}
+
 body {
+    margin: 0;
     font-family: 'Nunito', sans-serif;
+    background: #F7EEE4;
+    color: #111;
 }
 
-/* FIXED SIMPLE NAV */
-
-.simple-nav {
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+/* NAV — UNIFIED WITH MAIN SITE */
+#mainNav,
+#mainNav.navbar-shrink {
+    background: #F7EEE4 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    min-height: 80px;
+    transition: none !important;
 }
 
-.simple-nav .navbar-brand {
+#mainNav .navbar-brand,
+#mainNav .nav-link,
+#mainNav .navbar-toggler {
     color: #111 !important;
-    font-family: 'Varela Round', sans-serif;
-    letter-spacing: 1px;
+    opacity: 1 !important;
 }
 
-.simple-nav .nav-link {
-    color: #555 !important;
-    font-size: 0.95rem;
-    margin-left: 18px;
+#mainNav .nav-link:hover {
+    opacity: 0.6;
 }
 
-.simple-nav .nav-link:hover {
-    color: #000 !important;
-}
-
-/* MOBILE MENU BUTTON */
-
-.navbar-toggler {
-    border: none;
-    box-shadow: none !important;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-/* PAGE SPACING */
-
+/* PAGE LAYOUT */
 .projects-section {
     padding-top: 140px;
     padding-bottom: 100px;
 }
 
-/* IMAGE TILES */
-
+/* IMAGE STYLE (kept structure, improved consistency) */
 .image-tile {
     height: 250px;
     overflow: hidden;
@@ -86,19 +73,16 @@ body {
 }
 
 /* TEXT */
-
 .section-text {
     font-size: 1rem;
     line-height: 1.7;
     color: #333;
 }
 
-/* FOOTER */
-
+/* FOOTER — MATCH MAIN SITE */
 .footer {
-    background: white;
-    border-top: 1px solid rgba(0,0,0,0.06);
-
+    background: #F7EEE4;
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding: 70px 30px 50px;
     text-align: center;
 }
@@ -127,9 +111,8 @@ body {
 
 <body id="page-top">
 
-<!-- NAVIGATION -->
-
-<nav class="navbar navbar-expand-lg fixed-top simple-nav">
+<!-- NAV (UPDATED SYSTEM ONLY) -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 
     <div class="container px-4 px-lg-5">
 
@@ -137,15 +120,7 @@ body {
             Sally Jamila
         </a>
 
-        <button 
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <i class="fas fa-bars"></i>
         </button>
 
@@ -170,18 +145,14 @@ body {
         </div>
 
     </div>
-
 </nav>
 
-<!-- MAIN SECTION -->
-
-<section class="projects-section bg-light" id="projects">
+<!-- MAIN SECTION (UNCHANGED CONTENT) -->
+<section class="projects-section" id="projects">
 
     <div class="container px-4 px-lg-5">
 
         <br/><br/>
-
-        <!-- ROW 1 -->
 
         <div class="row align-items-center mb-5">
 
@@ -202,10 +173,6 @@ body {
 
         </div>
 
-        <!-- ROW 2 -->
-
-
-
         <div class="row align-items-center mb-5">
 
             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -221,8 +188,6 @@ body {
             </div>
 
         </div>
-
-        <!-- ROW 3 (FIXED ALIGNMENT) -->
 
         <div class="row align-items-start mb-5">
 
@@ -257,14 +222,9 @@ body {
 </section>
 
 <!-- FOOTER -->
-
 <footer class="footer" id="contact">
 
-    <img 
-        src="assets/img/LGEHibiscusLOGO.png" 
-        alt="Logo"
-        class="footer-logo"
-    >
+    <img src="assets/img/LGEHibiscusLOGOTransparent.png" class="footer-logo" />
 
     <div class="footer-email">
         sally@sallyjamila.com
