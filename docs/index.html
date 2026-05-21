@@ -46,21 +46,87 @@ img {
     display: block;
 }
 
-/* NAV */
-#mainNav {
-    background: rgba(247, 238, 228, 0.85) !important;
-    backdrop-filter: blur(10px);
+/* NAV — FIXED STYLE, NO SCROLL CHANGES */
+
+#mainNav,
+#mainNav.navbar-shrink {
+
+    background: #F7EEE4 !important;
+
+    backdrop-filter: none !important;
+
     border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    min-height: 80px;
+
+    transition: none !important;
+}
+
+/* keep ALL text same colour */
+
+#mainNav .navbar-brand,
+#mainNav .nav-link,
+#mainNav .navbar-toggler,
+#mainNav.navbar-shrink .navbar-brand,
+#mainNav.navbar-shrink .nav-link,
+#mainNav.navbar-shrink .navbar-toggler {
+
+    color: #111 !important;
+
+    opacity: 1 !important;
+
+    transition: none !important;
+}
+
+/* hover remains subtle */
+
+#mainNav .nav-link:hover {
+    opacity: 0.6;
+}
+
+/* remove Bootstrap active colour changes */
+
+#mainNav .nav-link.active,
+#mainNav .navbar-brand:hover {
+    color: #111 !important;
+}
+
+/* remove any shadow added on scroll */
+
+#mainNav.navbar-shrink {
+    box-shadow: none !important;
 }
 
 /* HERO */
 .masthead {
-    height: 82vh;
+
+    /* always start BELOW fixed nav */
+    margin-top: 80px;
+
+    /* keep visible hero height consistent */
+    height: calc(100vh - 80px);
+
     background:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url('assets/img/sally-flower-2.jpg');
+
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+
+    #mainNav {
+        min-height: 72px;
+    }
+
+    .masthead {
+        margin-top: 72px;
+        height: calc(100vh - 72px);
+    }
+
 }
 
 /* ABOUT */
@@ -331,7 +397,7 @@ img {
     </div>
 
     <!-- Invocation -->
-    <div class="project reverse">
+    <div class="project">
 
         <div class="project-image">
             <img src="assets/img/InvocationPhoto.jpg" alt="Invocation">
@@ -354,7 +420,7 @@ img {
     </div>
 
     <!-- ACAPOLLiNATIONS -->
-    <div class="project reverse">
+    <div class="project">
 
         <div class="project-image">
             <img src="assets/img/AcapollinationsTrioSmile_0201.PNG" alt="ACAPOLLiNATIONS">
@@ -381,7 +447,7 @@ img {
 <!-- Footer -->
 <footer class="footer" id="contact">
 
-    <img src="assets/img/LGEHibiscusLOGO.png" class="footer-logo" />
+    <img src="assets/img/LGEHibiscusLOGOTransparent.png" class="footer-logo" />
 
     <div class="footer-email">
         sally@sallyjamila.com
@@ -398,7 +464,7 @@ img {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core theme JS -->
-<script src="js/scripts.js"></script>
+<!-- <script src="js/scripts.js"></script> -->
 
 <!-- SB Forms -->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
