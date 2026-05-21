@@ -49,6 +49,23 @@ body {
     opacity: 0.6;
 }
 
+/* ALL NON-NAV LINKS */
+a {
+    color: #A31635;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* hover state */
+a:hover {
+    color: #1E4A3A;
+    opacity: 1; /* stop the fade interfering with colour */
+}
+
+/* KEEP NAV LINKS UNCHANGED */
+#mainNav a {
+    color: #111 !important;
+}
+
 /* PAGE LAYOUT */
 .projects-section {
     padding-top: 140px;

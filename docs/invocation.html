@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Sally Jamila</title>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Sally Jamila</title>
 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-        <!-- Font Awesome icons -->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-        <!-- Google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,700" rel="stylesheet" />
 
-        <!-- Core theme CSS -->
-        <link href="css/styles.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
 
 <style>
 
+/* GLOBAL MATCH MAIN SITE */
+html {
+    scroll-behavior: smooth;
+    background: #F7EEE4;
+}
+
 body {
+    margin: 0;
     font-family: 'Nunito', sans-serif;
+    background: #F7EEE4;
+    color: #111;
 }
 
-/* NAV (MATCH OTHER PAGE) */
-
-.simple-nav {
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+/* NAV — UNIFIED */
+#mainNav,
+#mainNav.navbar-shrink {
+    background: #F7EEE4 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    min-height: 80px;
+    transition: none !important;
 }
 
-.simple-nav .navbar-brand {
+#mainNav .navbar-brand,
+#mainNav .nav-link,
+#mainNav .navbar-toggler {
     color: #111 !important;
-    font-family: 'Varela Round', sans-serif;
-    letter-spacing: 1px;
+    opacity: 1 !important;
 }
 
-.simple-nav .nav-link {
-    color: #555 !important;
-    font-size: 0.95rem;
-    margin-left: 18px;
+#mainNav .nav-link:hover {
+    opacity: 0.6;
 }
 
-.simple-nav .nav-link:hover {
-    color: #000 !important;
-}
-
-.navbar-toggler {
-    border: none;
-    box-shadow: none !important;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-/* IMPORTANT FIX FOR FIXED NAV */
+/* IMPORTANT FIX FOR NAV OFFSET */
 .projects-section {
     padding-top: 140px;
 }
 
-/* YOUR ORIGINAL STYLES (UNCHANGED) */
+/* GLOBAL LINKS (NON NAV) */
+a {
+    color: #A31635;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    text-decoration: none;
+}
 
+a:hover {
+    color: #E4A3A;
+    opacity: 1;
+}
+
+/* KEEP NAV LINKS CLEAN */
+#mainNav a {
+    color: #111 !important;
+}
+
+/* PAGE LAYOUT */
 .track-list {
     margin-top: 10px;
 }
@@ -87,6 +92,7 @@ body {
     color: #777;
 }
 
+/* STREAMING LINKS */
 .streaming-links {
     margin-top: 35px;
     display: flex;
@@ -114,21 +120,10 @@ body {
     font-size: 1.2rem;
 }
 
-.back-link {
-    color: #666;
-    text-decoration: none;
-}
-
-.back-link:hover {
-    color: #000;
-}
-
-/* FOOTER */
-
+/* FOOTER — MATCH MAIN SYSTEM */
 .footer {
-    background: white;
-    border-top: 1px solid rgba(0,0,0,0.06);
-
+    background: #F7EEE4;
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding: 70px 30px 50px;
     text-align: center;
 }
@@ -153,208 +148,161 @@ body {
 
 </style>
 
-    </head>
+</head>
 
-    <body id="page-top">
+<body id="page-top">
 
-        <!-- NAVIGATION (UPDATED ONLY PART) -->
-        <nav class="navbar navbar-expand-lg fixed-top simple-nav">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 
-            <div class="container px-4 px-lg-5">
+    <div class="container px-4 px-lg-5">
 
-                <a class="navbar-brand" href="./index.html">
-                    Sally Jamila
-                </a>
+        <a class="navbar-brand" href="./index.html">
+            Sally Jamila
+        </a>
 
-                <button 
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i class="fas fa-bars"></i>
-                </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            <i class="fas fa-bars"></i>
+        </button>
 
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
 
-                    <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#projects">
-                                Projects
-                            </a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html#projects">
+                        Projects
+                    </a>
+                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#contact">
-                                Contact
-                            </a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html#contact">
+                        Contact
+                    </a>
+                </li>
 
-                    </ul>
+            </ul>
 
-                </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="projects-section" id="projects">
+
+    <div class="container px-4 px-lg-5">
+
+        <br/><br/>
+
+        <h3>Invocation</h3>
+
+        <br/>
+
+        <!-- MAIN ROW -->
+        <div class="row gx-0 mb-5 align-items-center">
+
+            <div class="col-xl-4 col-lg-4">
+
+                <img class="img-fluid"
+                     src="assets/img/SJH_CD_CoverFULL.jpg"
+                     alt="Invocation album cover" />
 
             </div>
-        </nav>
 
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+            <div class="col-xl-1 col-lg-1"></div>
 
-            <div class="container px-4 px-lg-5">
+            <div class="col-xl-7 col-lg-7">
 
-        <!--         <a class="back-link" href="./index.html">
-                    ← back
-                </a> -->
+                Intended to create a rich soundscape through meditative invocation, Invocation weaves together eclectic world music with the tradition of a spiritual practice. The result is an album that creates contemplative calm and an invitation to feel That Which Is All-Pervading.
 
                 <br/><br/>
 
-                <h3>Invocation</h3>
+                Dedicating this album to her spiritual teacher and world-friend, Adi Da Samraj — upon hearing it, Adi Da Samraj requested that Invocation be placed on his "Favorites" list on his personal iPod.
 
-                <br/>
+                <br/><br/>
 
-                <!-- MAIN ROW -->
+                Also available as downloadable MP3s from The Dawn Horse Press 
+                <a href="http://www.dawnhorsepress.com/ProductDetail.aspx?PID=3699">
+                    here
+                </a>.
 
-                <div class="row gx-0 mb-5 align-items-center">
+                <!-- STREAMING LINKS -->
+                <div class="streaming-links">
 
-                    <div class="col-xl-4 col-lg-4">
+                    <a href="https://music.apple.com/us/album/invocation-ep/293768386" target="_blank">
+                        <i class="fab fa-apple"></i>
+                        Apple Music
+                    </a>
 
-                        <img 
-                            class="img-fluid" 
-                            src="assets/img/SJH_CD_CoverFULL.jpg" 
-                            alt="Invocation album cover" 
-                        />
-
-                    </div>
-
-                    <div class="col-xl-1 col-lg-1"></div>
-
-                    <div class="col-xl-7 col-lg-7">
-
-                        Intended to create a rich soundscape through meditative invocation, Invocation weaves together eclectic world music with the tradition of a spiritual practice. The result is an album that creates contemplative calm and an invitation to feel That Which Is All-Pervading.
-
-                        <br/><br/>
-
-                        Dedicating this album to her spiritual teacher and world-friend, Adi Da Samraj — upon hearing it, Adi Da Samraj requested that Invocation be placed on his "Favorites" list on his personal iPod.
-
-                        <br/><br/>
-
-                        Also available as downloadable MP3s from The Dawn Horse Press 
-                        <a href="http://www.dawnhorsepress.com/ProductDetail.aspx?PID=3699">
-                            here
-                        </a>.
-
-                        <!-- STREAMING LINKS -->
-
-                        <div class="streaming-links">
-
-                            <a href="https://music.apple.com/us/album/invocation-ep/293768386" target="_blank">
-                                <i class="fab fa-apple"></i>
-                                Apple Music
-                            </a>
-
-                            <a href="https://open.spotify.com/search/sally%20jamila%20invocation" target="_blank">
-                                <i class="fab fa-spotify"></i>
-                                Spotify
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- TRACK LIST -->
-
-                <div class="row gx-0 mb-5 align-items-center">
-
-                    <div class="col-xl-7 col-lg-7">
-
-                        <h4>Track Listing</h4>
-
-                        <div class="track-list">
-
-                            <table>
-
-                                <tr>
-                                    <td>1. Call To Prayer</td>
-                                    <td>4:06</td>
-                                </tr>
-
-                                <tr>
-                                    <td>2. Invocation</td>
-                                    <td>7:50</td>
-                                </tr>
-
-                                <tr>
-                                    <td>3. Sapta Na Samraj</td>
-                                    <td>6:21</td>
-                                </tr>
-
-                                <tr>
-                                    <td>4. Adi Da Beloved Guru</td>
-                                    <td>9:41</td>
-                                </tr>
-
-                                <tr>
-                                    <td>5. Adi Guru</td>
-                                    <td>8:02</td>
-                                </tr>
-
-                                <tr>
-                                    <td>6. The Mystery Chant</td>
-                                    <td>1:28</td>
-                                </tr>
-
-                            </table>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-1 col-lg-1"></div>
-
-                    <div class="col-xl-4 col-lg-4">
-
-                        <img 
-                            class="img-fluid" 
-                            src="assets/img/AltarChurch_3.jpg" 
-                            alt="Invocation artwork"
-                        />
-
-                    </div>
+                    <a href="https://open.spotify.com/search/sally%20jamila%20invocation" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </a>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- FOOTER-->
-        <footer class="footer">
+        <!-- TRACK LIST -->
+        <div class="row gx-0 mb-5 align-items-center">
 
-            <img 
-                src="assets/img/LGEHibiscusLOGO.png" 
-                alt="Logo"
-                class="footer-logo"
-            >
+            <div class="col-xl-7 col-lg-7">
 
-            <div class="footer-email">
-                sally@sallyjamila.com
+                <h4>Track Listing</h4>
+
+                <div class="track-list">
+
+                    <table>
+
+                        <tr><td>1. Call To Prayer</td><td>4:06</td></tr>
+                        <tr><td>2. Invocation</td><td>7:50</td></tr>
+                        <tr><td>3. Sapta Na Samraj</td><td>6:21</td></tr>
+                        <tr><td>4. Adi Da Beloved Guru</td><td>9:41</td></tr>
+                        <tr><td>5. Adi Guru</td><td>8:02</td></tr>
+                        <tr><td>6. The Mystery Chant</td><td>1:28</td></tr>
+
+                    </table>
+
+                </div>
+
             </div>
 
-            <div class="footer-copy">
-                Copyright &copy; Sally Jamila 2024<br>
-                Photography by Sabine Mignault &amp; Robert Mignault
+            <div class="col-xl-1 col-lg-1"></div>
+
+            <div class="col-xl-4 col-lg-4">
+
+                <img class="img-fluid"
+                     src="assets/img/AltarChurch_3.jpg"
+                     alt="Invocation artwork" />
+
             </div>
 
-        </footer>
+        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
+    </div>
 
-    </body>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <img src="assets/img/LGEHibiscusLOGOTransparent.png" class="footer-logo" />
+
+    <div class="footer-email">
+        sally@sallyjamila.com
+    </div>
+
+    <div class="footer-copy">
+        Copyright © Sally Jamila 2024<br>
+        Photography by Sabine Mignault &amp; Robert Mignault
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
